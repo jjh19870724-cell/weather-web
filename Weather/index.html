@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>城市天气查询</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // 内联脚本，用于测试JavaScript是否正常工作
+        function testInlineScript() {
+            alert('内联脚本测试成功!');
+            return false;
+        }
+        
+        // 在页面加载完成后执行
+        window.onload = function() {
+            console.log('页面加载完成 (内联脚本)');
+            // 创建一个测试元素
+            var testElement = document.createElement('div');
+            testElement.innerHTML = '<button onclick="testInlineScript()" style="background-color: red; color: white; padding: 10px; margin: 10px;">测试内联脚本</button>';
+            document.body.insertBefore(testElement, document.body.firstChild);
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>城市天气查询</h1>
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="请输入城市名称..." />
+            <button id="search-btn">查询</button>
+            <button id="test-api-btn">测试API</button>
+        </div>
+        <div class="weather-info" id="weather-info">
+            <!-- 天气信息将在这里显示 -->
+            <div class="placeholder-text">请输入城市名称查询天气</div>
+        </div>
+        
+        <!-- 调试区域 -->
+        <div class="debug-section">
+            <button id="debug-btn" class="debug-btn">调试信息</button>
+            <div id="debug-info" class="debug-info"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
