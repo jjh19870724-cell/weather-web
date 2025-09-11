@@ -3,44 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>城市天气查询</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        // 内联脚本，用于测试JavaScript是否正常工作
-        function testInlineScript() {
-            alert('内联脚本测试成功!');
-            return false;
-        }
-        
-        // 在页面加载完成后执行
-        window.onload = function() {
-            console.log('页面加载完成 (内联脚本)');
-            // 创建一个测试元素
-            var testElement = document.createElement('div');
-            testElement.innerHTML = '<button onclick="testInlineScript()" style="background-color: red; color: white; padding: 10px; margin: 10px;">测试内联脚本</button>';
-            document.body.insertBefore(testElement, document.body.firstChild);
-        };
-    </script>
+    <link rel="stylesheet" href="style.css?v=1.0.1">
 </head>
 <body>
     <div class="container">
         <h1>城市天气查询</h1>
         <div class="search-box">
-            <input type="text" id="city-input" placeholder="请输入城市名称..." />
+            <input type="text" id="city-input" placeholder="Shanghai" value="Shanghai">
             <button id="search-btn">查询</button>
             <button id="test-api-btn">测试API</button>
         </div>
-        <div class="weather-info" id="weather-info">
-            <!-- 天气信息将在这里显示 -->
+        <div id="weather-info">
             <div class="placeholder-text">请输入城市名称查询天气</div>
         </div>
-        
-        <!-- 调试区域 -->
+        <div class="recommendation-section">
+            <button id="get-recommendations-btn" style="display: none;">获取旅游推荐</button>
+            <div id="recommendations-info" style="display: none;">
+                <h3>🎯 AI旅游推荐</h3>
+                <div id="recommendations-content">
+                    <div class="placeholder-text">点击上方按钮获取基于当前天气的旅游推荐</div>
+                </div>
+            </div>
+        </div>
         <div class="debug-section">
-            <button id="debug-btn" class="debug-btn">调试信息</button>
-            <div id="debug-info" class="debug-info"></div>
+            <button id="debug-btn">显示调试信息</button>
+            <pre id="debug-info" style="display: none;"></pre>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js?v=1.0.1"></script>
 </body>
 </html>

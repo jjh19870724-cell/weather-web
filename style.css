@@ -220,3 +220,88 @@ h1 {
         margin-bottom: 10px;
     }
 }
+
+/* 推荐功能样式 */
+.recommendation-section {
+    margin-top: 20px;
+}
+
+#get-recommendations-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+#get-recommendations-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+#get-recommendations-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+#recommendations-info {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 15px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#recommendations-info h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+#recommendations-content {
+    text-align: left;
+    line-height: 1.6;
+    color: #555;
+}
+
+.recommendation-item {
+    background-color: #f8f9fa;
+    border-left: 4px solid #667eea;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 0 8px 8px 0;
+}
+
+.recommendation-item h4 {
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.recommendation-item p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
